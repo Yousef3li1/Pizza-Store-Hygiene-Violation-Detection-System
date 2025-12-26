@@ -65,10 +65,7 @@ Video Source → Frame Reader → Kafka → Detection Service → Kafka → Stre
 3. **Streaming Service** - REST API, WebSocket, and video streaming
 4. **Kafka Message Broker** - Asynchronous message passing
 5. **Frontend UI** - Web interface for monitoring
-
-See [SYSTEM_DIAGRAM.md](SYSTEM_DIAGRAM.md) for detailed architecture diagram.
-
-## 📦 Prerequisites
+📦 Prerequisites
 
 - Python 3.8 or higher
 - Apache Kafka (for microservices mode)
@@ -296,7 +293,7 @@ A violation is triggered when:
 - Use GPU if available
 - Lower video resolution
 
-See [DOCUMENTATION.md](DOCUMENTATION.md) for detailed troubleshooting guide.
+
 
 ## 📊 Performance
 
