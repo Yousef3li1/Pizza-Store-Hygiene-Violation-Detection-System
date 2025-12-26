@@ -5,7 +5,6 @@ A real-time Computer Vision system built with microservices architecture to moni
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status](https://img.shields.io/badge/status-production-brightgreen.svg)
-
 ## 📋 Table of Contents
 
 - [Overview](#overview)
