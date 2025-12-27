@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Stream Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f0f0f0;
+        }
+        h1 { color: #333; }
+        .status { 
+            padding: 10px; 
+            margin: 10px 0; 
+            background: white; 
+            border-radius: 5px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+        #videoStream {
+            width: 100%;
+            max-width: 1200px;
+            border: 3px solid #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍕 Pizza Detection - Video Stream Test</h1>
+    
+    <div class="status">
+        <h3>System Status:</h3>
+        <div id="status">Checking...</div>
+    </div>
+    
+    <div class="status">
+        <h3>Video Stream:</h3>
+        <img id="videoStream" src="/stream/video" alt="Loading video stream...">
+    </div>
+    
+    <script>
+        // Check API status
+        fetch('/api/status')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('status').innerHTML = `
+                    <p class="success">✓ Server: ${data.status}</p>
+                    <p class="success">✓ Frames Available: ${data.latest_frame_available}</p>
+                    <p class="success">✓ Violations: ${data.total_violations}</p>
+                `;
+            })
+            .catch(err => {
+                document.getElementById('status').innerHTML = `
+                    <p class="error">✗ Error: ${err.message}</p>
+                `;
+            });
+        
+        // Video stream error handling
+        const video = document.getElementById('videoStream');
+        video.onerror = function() {
+            alert('Error loading video stream! Check console for details.');
+            console.error('Video stream failed to load');
+        };
+        
+        video.onload = function() {
+            console.log('Video stream loaded successfully!');
+        };
+    </script>
+</body>
+</html>
+
+
+
+

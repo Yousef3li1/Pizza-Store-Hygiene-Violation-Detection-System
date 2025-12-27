@@ -1,4 +1,4 @@
-# Config package
+# Utils package
 
 
 
