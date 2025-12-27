@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Protein Container",
+    "coords": [400, 300, 700, 500],
+    "color": [0, 255, 0],
+    "description": "Area where protein ingredients are stored"
+  },
+  {
+    "name": "Sauce Container",
+    "coords": [100, 200, 400, 450],
+    "color": [255, 0, 0],
+    "description": "Area where sauce is stored (example - disabled by default)"
+  }
+]
+
+
+
+
